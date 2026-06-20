@@ -14,6 +14,7 @@ M.modules = {
   "base",       -- core editor UI (:h highlight-groups)
   "syntax",     -- legacy vim syntax (:h group-name)
   "treesitter", -- @-captures (:h treesitter-highlight)
+  "typescript", -- TypeScript/TSX-specific captures (pairs with after/queries)
   "lsp",        -- diagnostics + semantic tokens (:h lsp-highlight)
   "gitsigns",   -- gitsigns.nvim
 }

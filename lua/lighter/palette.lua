@@ -26,6 +26,7 @@ local palette = {
   type      = "#708b8d", -- types, delimiters
   operator  = "#708b8d", -- operators
   comment   = "#696969", -- comments, line numbers
+  faint     = "#9a9a9a", -- de-emphasized text (e.g. TS import/export)
   emphasis  = "#325cc0", -- titles, returns, links (the "accent" blue)
   func      = "#325cc0", -- function names
   string    = "#448c27", -- strings
