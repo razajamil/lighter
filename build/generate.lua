@@ -2,17 +2,21 @@
 -- lighter — build runner
 -- ============================================================================
 -- Regenerates every application config from the base palette.
---   Run:  nvim --headless -l build/generate.lua      (or `make build`)
+--   Run:  scripts/build.sh   (or `make build`)
 --
--- Neovim is just used as a convenient Lua runtime here — no plugins, no config.
--- To add a target: write build/targets/<name>.lua returning fn(term, meta) and
--- add an entry to `targets` below.
+-- Pure Lua — no Neovim APIs — so it runs under any `lua`/`luajit` (used in CI)
+-- as well as Neovim (`nvim -l`). To add a target: write build/targets/<name>.lua
+-- returning fn(term, meta) and add an entry to `targets` below.
 -- ----------------------------------------------------------------------------
 
--- Resolve the repo root from this script's own location, then make both the
--- `lighter.*` modules and `build.targets.*` requireable regardless of cwd.
-local script = debug.getinfo(1, "S").source:sub(2)
-local root = vim.fn.fnamemodify(script, ":h:h")
+-- Resolve the repo root from this script's own path, so requires + output paths
+-- work regardless of the current directory.
+local function dirname(p)
+  return p:match("^(.*)[/\\][^/\\]*$") or "."
+end
+local script = debug.getinfo(1, "S").source:sub(2) -- .../build/generate.lua
+local root = dirname(dirname(script))               -- repo root
+
 package.path = table.concat({
   root .. "/lua/?.lua",
   root .. "/lua/?/init.lua",
@@ -33,7 +37,7 @@ local targets = {
 }
 
 local function write(path, data)
-  vim.fn.mkdir(vim.fn.fnamemodify(path, ":h"), "p")
+  os.execute('mkdir -p "' .. dirname(path) .. '"')
   local f = assert(io.open(path, "w"))
   f:write(data)
   f:close()

@@ -1,0 +1,33 @@
+name: release
+# On a vX.Y.Z tag: verify the generated configs are current, then publish a
+# GitHub release with the consumable theme files attached, so kitty-only users
+# can grab a single file without cloning.
+on:
+  push:
+    tags: ["v*"]
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Lua
+        run: sudo apt-get update && sudo apt-get install -y lua5.4
+      - name: Build and verify generated configs are current
+        run: |
+          bash scripts/build.sh
+          if ! git diff --quiet -- extras/; then
+            echo "::error::extras/ is not current for this tag. Run 'make build' and commit before tagging."
+            git --no-pager diff -- extras/
+            exit 1
+          fi
+      - name: Package terminal extras
+        run: tar -czf lighter-terminal-extras.tar.gz -C extras .
+      - name: Publish release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            extras/kitty/lighter.conf
+            lighter-terminal-extras.tar.gz
+          generate_release_notes: true
