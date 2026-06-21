@@ -19,34 +19,34 @@ local palette = {
   fg        = "#000000", -- default foreground text
   dim       = "#bfd9d9", -- faint, low-contrast accents (e.g. whitespace)
   line      = "#e2eeee", -- cursorline, selection, subtle fills
-  border    = "#999999", -- window/float borders, separators
+  border    = "#8f8f8f", -- window/float borders, separators
 
   -- Syntax roles -------------------------------------------------------------
   keyword   = "#525252", -- keywords, statements
-  type      = "#708b8d", -- types, delimiters
-  operator  = "#708b8d", -- operators
+  type      = "#5f7678", -- types, delimiters
+  operator  = "#5f7678", -- operators
   comment   = "#696969", -- comments, line numbers
   faint     = "#9a9a9a", -- de-emphasized text (e.g. TS import/export)
   emphasis  = "#325cc0", -- titles, returns, links (the "accent" blue)
   func      = "#325cc0", -- function names
-  string    = "#448c27", -- strings
+  string    = "#3e8024", -- strings
   char      = "#7a3e9d", -- characters
   special   = "#7a3e9d", -- identifiers, special chars
   const     = "#7a3e9d", -- constants, numbers, booleans
 
   -- Diagnostic / status semantics -------------------------------------------
-  highlight = "#bc7500", -- attention / matched text
-  info      = "#007acc", -- info / hints
-  success   = "#448c27", -- success / additions
-  warning   = "#bc7500", -- warning / changes
+  highlight = "#a16400", -- attention / matched text
+  info      = "#0075c4", -- info / hints
+  success   = "#3e8024", -- success / additions
+  warning   = "#a16400", -- warning / changes
   danger    = "#d13e23", -- error / deletions
 
   -- Raw accent hues (for terminal ANSI + ad-hoc use) -------------------------
-  green     = "#448c27",
-  orange    = "#ec8013",
+  green     = "#3e8024",
+  orange    = "#ac5d0e",
   red       = "#aa3731",
   pink      = "#7a3e9d",
-  cyan      = "#0083b2",
+  cyan      = "#007aa6",
 }
 
 return palette

@@ -11,7 +11,7 @@ function M.get_hl(c, opts)
     Normal            = { fg = c.fg, bg = opts.transparent and "none" or c.bg },
     NormalFloat       = { link = "Normal" },
     FloatBorder       = { fg = c.border, bg = opts.transparent and "none" or c.bg },
-    Cursor            = { fg = c.fg, bg = c.fg },
+    Cursor            = { fg = c.bg, bg = c.fg },
     TermCursor        = { link = "Cursor" },
     lCursor           = { link = "Cursor" },
     CursorIM          = { link = "Cursor" },
@@ -54,7 +54,7 @@ function M.get_hl(c, opts)
     DiffAdd           = { fg = c.success, bg = Utils.blend(c.success, c.bg, 0.2) },
     DiffChange        = { fg = c.warning, bg = Utils.blend(c.warning, c.bg, 0.2) },
     DiffDelete        = { fg = c.danger,  bg = Utils.blend(c.danger,  c.bg, 0.2) },
-    DiffText          = { fg = c.warning, bg = Utils.blend(c.warning, c.bg, 0.4) },
+    DiffText          = { fg = c.fg, bg = Utils.blend(c.warning, c.bg, 0.4), bold = true },
   }
 end
 
