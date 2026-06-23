@@ -17,6 +17,7 @@ M.modules = {
   "typescript", -- TypeScript/TSX-specific captures (pairs with after/queries)
   "lsp",        -- diagnostics + semantic tokens (:h lsp-highlight)
   "gitsigns",   -- gitsigns.nvim
+  "yanky",      -- yanky.nvim (yank/put flash)
 }
 
 --- Build the full highlight table from the palette + options.

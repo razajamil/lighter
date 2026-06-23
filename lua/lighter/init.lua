@@ -42,6 +42,12 @@ function M.load()
   vim.o.background = "light"
   vim.g.colors_name = "lighter"
 
+  -- Expose :LighterReload whenever the colorscheme is active — works even when
+  -- the plugin spec never calls setup() (e.g. a bare LazyVim colorscheme entry).
+  vim.api.nvim_create_user_command("LighterReload", function()
+    require("lighter.utils").reload()
+  end, { desc = "Reload the lighter colorscheme from source" })
+
   for group, hl in pairs(groups.setup(palette, config.options)) do
     vim.api.nvim_set_hl(0, group, hl)
   end
