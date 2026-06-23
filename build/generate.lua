@@ -34,6 +34,7 @@ local term = require("lighter.terminal")
 
 local targets = {
   { module = "build.targets.kitty", out = "/extras/kitty/lighter.conf" },
+  { module = "build.targets.herdr", out = "/extras/herdr/lighter.toml" },
 }
 
 local function write(path, data)

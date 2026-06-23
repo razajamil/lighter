@@ -1,0 +1,18 @@
+# vim:ft=toml
+## Lighter (Glade) — herdr theme overrides
+## based on koda.nvim — glade variant
+#
+# GENERATED from lua/lighter/palette.lua — do not edit by hand.
+# herdr has no config `include`: copy the [theme.custom] block below into
+# ~/.config/herdr/config.toml. Requires the base theme `[theme] name = "terminal"`
+# so herdr inherits the lighter palette from your terminal.
+#
+# Token roles (verified against herdr source):
+#   surface_dim — active/selected workspace row background  (src/ui/sidebar.rs)
+#   accent      — selected tab background + nav accents      (src/ui/tabs.rs)
+#                 NB: the selected tab's fg is panel_bg (~white); herdr has
+#                 no tab-only foreground token.
+
+[theme.custom]
+surface_dim = "#bfd9d9"
+accent      = "#c34b0a"
