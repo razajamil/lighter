@@ -30,9 +30,9 @@ local palette = {
   emphasis  = "#325cc0", -- titles, returns, links (the "accent" blue)
   func      = "#325cc0", -- function names
   string    = "#3e8024", -- strings
-  char      = "#7a3e9d", -- characters
-  special   = "#7a3e9d", -- identifiers, special chars
-  const     = "#7a3e9d", -- constants, numbers, booleans
+  char      = "#c34b0a", -- characters
+  special   = "#c34b0a", -- identifiers, special chars
+  const     = "#c34b0a", -- constants, numbers, booleans
 
   -- Diagnostic / status semantics -------------------------------------------
   highlight = "#a16400", -- attention / matched text
@@ -45,7 +45,7 @@ local palette = {
   green     = "#3e8024",
   orange    = "#ac5d0e",
   red       = "#aa3731",
-  pink      = "#7a3e9d",
+  pink      = "#c34b0a",
   cyan      = "#007aa6",
 }
 
