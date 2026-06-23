@@ -19,14 +19,14 @@ local palette = {
   fg        = "#000000", -- default foreground text
   dim       = "#bfd9d9", -- faint, low-contrast accents (e.g. whitespace)
   line      = "#e2eeee", -- cursorline, selection, subtle fills
-  border    = "#8f8f8f", -- window/float borders, separators
+  border    = "#9e9e9e", -- window/float borders, separators
 
   -- Syntax roles -------------------------------------------------------------
   keyword   = "#525252", -- keywords, statements
-  type      = "#5f7678", -- types, delimiters
-  operator  = "#5f7678", -- operators
-  comment   = "#696969", -- comments, line numbers
-  faint     = "#9a9a9a", -- de-emphasized text (e.g. TS import/export)
+  type      = "#5b9196", -- types, delimiters
+  operator  = "#5b9196", -- operators
+  comment   = "#787878", -- comments, line numbers
+  faint     = "#a9a9a9", -- de-emphasized text (e.g. TS import/export)
   emphasis  = "#325cc0", -- titles, returns, links (the "accent" blue)
   func      = "#325cc0", -- function names
   string    = "#3e8024", -- strings
