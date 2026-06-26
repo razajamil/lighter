@@ -35,6 +35,7 @@ local term = require("lighter.terminal")
 local targets = {
   { module = "build.targets.kitty", out = "/extras/kitty/lighter.conf" },
   { module = "build.targets.herdr", out = "/extras/herdr/lighter.toml" },
+  { module = "build.targets.lazygit", out = "/extras/lazygit/lighter.yml" },
 }
 
 local function write(path, data)

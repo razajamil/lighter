@@ -1,0 +1,45 @@
+# vim:ft=yaml
+## Lighter (Glade) — lazygit theme
+## based on koda.nvim — glade variant
+#
+# GENERATED from lua/lighter/palette.lua — do not edit by hand.
+# Edit the palette, then run `make build`.
+#
+# lazygit has no config `include`: copy the gui.theme block below into your
+# lazygit config.yml (`lazygit --print-config-dir` locates it).
+#
+# Color roles (keys verified against lazygit docs/Config.md):
+#   activeBorderColor      — focused window border  (accent blue, like kitty)
+#   selectedLineBgColor    — selected line in the focused panel
+#   cherryPickedCommit*    — commits copied for cherry-pick
+#   markedBaseCommit*      — base commit marked for rebase
+#   unstagedChangesColor   — files with unstaged changes (git delete red)
+
+gui:
+  theme:
+    activeBorderColor:
+      - "#325cc0"
+      - bold
+    inactiveBorderColor:
+      - "#9e9e9e"
+    searchingActiveBorderColor:
+      - "#a16400"
+      - bold
+    optionsTextColor:
+      - "#325cc0"
+    selectedLineBgColor:
+      - "#bfd9d9"
+    inactiveViewSelectedLineBgColor:
+      - "#e2eeee"
+    cherryPickedCommitFgColor:
+      - "#f7f7f7"
+    cherryPickedCommitBgColor:
+      - "#007aa6"
+    markedBaseCommitFgColor:
+      - "#f7f7f7"
+    markedBaseCommitBgColor:
+      - "#a16400"
+    unstagedChangesColor:
+      - "#d13e23"
+    defaultFgColor:
+      - "#000000"
